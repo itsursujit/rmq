@@ -34,12 +34,6 @@ func OpenConnectionWithRedisClient(tag string, redisClient *redis.Client) *redis
 	return openConnectionWithRedisClient(tag, RedisWrapper{redisClient})
 }
 
-// OpenConnectionWithTestRedisClient opens and returns a new connection which
-// uses a test redis client internally. This is useful in integration tests.
-func OpenConnectionWithTestRedisClient(tag string) *redisConnection {
-	return openConnectionWithRedisClient(tag, NewTestRedisClient())
-}
-
 func openConnectionWithRedisClient(tag string, redisClient RedisClient) *redisConnection {
 	name := fmt.Sprintf("%s-%s", tag, uniuri.NewLen(6))
 

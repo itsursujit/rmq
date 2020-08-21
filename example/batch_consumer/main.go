@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/itsursujit/rmq/v2"
+	"github.com/itsursujit/rmq"
 )
 
 const unackedLimit = 1000
