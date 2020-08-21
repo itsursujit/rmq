@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/adjust/rmq/v2"
+	"github.com/itsursujit/rmq/v2"
 )
 
 func main() {
